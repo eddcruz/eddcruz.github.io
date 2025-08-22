@@ -1,0 +1,128 @@
+:root{
+  --fg: #ffffff;
+  --bg1: #EE7752;
+  --bg2: #E73C7E;
+  --bg3: #23A6D5;
+  --bg4: #23D5AB;
+  --card: rgba(255,255,255,0.12);
+  --card-hover: rgba(255,255,255,0.18);
+  --shadow: 0 10px 30px rgba(0,0,0,0.25);
+  --radius: 16px;
+}
+
+*{ box-sizing: border-box; }
+
+html, body{
+  height: 100%;
+}
+
+body{
+  margin: 0;
+  color: var(--fg);
+  font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  /* fondo animado */
+  background: linear-gradient(-45deg, var(--bg1), var(--bg2), var(--bg3), var(--bg4));
+  background-size: 400% 400%;
+  animation: gradientShift 16s ease infinite;
+}
+
+@keyframes gradientShift{
+  0%{ background-position: 0% 50% }
+  50%{ background-position: 100% 50% }
+  100%{ background-position: 0% 50% }
+}
+
+.container{
+  min-height: 100svh;         /* mejor en móviles */
+  max-width: 820px;
+  margin: 0 auto;
+  padding: 48px 20px 32px;
+  display: grid;
+  gap: 28px;
+}
+
+.hero{
+  text-align: center;
+}
+
+.avatar{
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  box-shadow: var(--shadow);
+  display: inline-block;
+  object-fit: cover;
+}
+
+h1{
+  margin: 16px 0 4px;
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+}
+
+.subtitle{
+  margin: 0;
+  opacity: 0.9;
+  font-weight: 600;
+}
+
+.tagline{
+  margin: 8px auto 0;
+  max-width: 720px;
+  opacity: 0.9;
+}
+
+.links{
+  display: grid;
+  gap: 14px;
+}
+
+.btn{
+  display: block;
+  width: 100%;
+  text-align: center;
+  text-decoration: none;
+  color: var(--fg);
+  padding: 14px 18px;
+  border-radius: var(--radius);
+  background: var(--card);
+  backdrop-filter: blur(6px);
+  border: 1px solid rgba(255,255,255,0.2);
+  font-weight: 700;
+  box-shadow: var(--shadow);
+  transition: transform .08s ease, background .2s ease, border-color .2s ease;
+}
+
+.btn:hover{
+  transform: translateY(-1px);
+  background: var(--card-hover);
+  border-color: rgba(255,255,255,0.35);
+}
+
+.projects, .learning{
+  background: var(--card);
+  padding: 18px 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+h2{
+  margin: 0 0 10px;
+  font-size: clamp(18px, 3vw, 22px);
+}
+
+ul{
+  margin: 8px 0 0 18px;
+}
+
+.footer{
+  text-align: center;
+  opacity: 0.85;
+  font-size: 14px;
+}
+
+/* Correcciones respecto a tu CSS anterior:
+   - 100wh -> 100vw (era un error)
+   - Se eliminó jQuery/Bootstrap: no son necesarios aquí
+   - Evitamos estilos inline, todo al CSS
+   - Componentes accesibles y semánticos (header/main/footer) */
