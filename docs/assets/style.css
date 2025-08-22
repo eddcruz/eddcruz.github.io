@@ -12,15 +12,12 @@
 
 *{ box-sizing: border-box; }
 
-html, body{
-  height: 100%;
-}
+html, body{ height: 100%; }
 
 body{
   margin: 0;
   color: var(--fg);
   font-family: "Inter", system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
-  /* fondo animado */
   background: linear-gradient(-45deg, var(--bg1), var(--bg2), var(--bg3), var(--bg4));
   background-size: 400% 400%;
   animation: gradientShift 16s ease infinite;
@@ -32,8 +29,14 @@ body{
   100%{ background-position: 0% 50% }
 }
 
+/* respeta preferencias de movimiento del usuario */
+@media (prefers-reduced-motion: reduce){
+  body{ animation: none; }
+}
+
 .container{
-  min-height: 100svh;         /* mejor en móviles */
+  min-height: 100vh;   /* fallback */
+  min-height: 100svh;  /* moderno, mejor en móviles */
   max-width: 820px;
   margin: 0 auto;
   padding: 48px 20px 32px;
@@ -41,9 +44,7 @@ body{
   gap: 28px;
 }
 
-.hero{
-  text-align: center;
-}
+.hero{ text-align: center; }
 
 .avatar{
   width: 120px;
@@ -72,10 +73,7 @@ h1{
   opacity: 0.9;
 }
 
-.links{
-  display: grid;
-  gap: 14px;
-}
+.links{ display: grid; gap: 14px; }
 
 .btn{
   display: block;
@@ -87,6 +85,7 @@ h1{
   border-radius: var(--radius);
   background: var(--card);
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
   border: 1px solid rgba(255,255,255,0.2);
   font-weight: 700;
   box-shadow: var(--shadow);
@@ -111,18 +110,10 @@ h2{
   font-size: clamp(18px, 3vw, 22px);
 }
 
-ul{
-  margin: 8px 0 0 18px;
-}
+ul{ margin: 8px 0 0 18px; }
 
 .footer{
   text-align: center;
   opacity: 0.85;
   font-size: 14px;
 }
-
-/* Correcciones respecto a tu CSS anterior:
-   - 100wh -> 100vw (era un error)
-   - Se eliminó jQuery/Bootstrap: no son necesarios aquí
-   - Evitamos estilos inline, todo al CSS
-   - Componentes accesibles y semánticos (header/main/footer) */
