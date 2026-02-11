@@ -1,2 +1,2 @@
 # eddcruz.github.io
-Eduardo Cruz — Data Science &amp; ML Engineering portfolio &amp; blog
+Data & Automation Engineering portfolio focused on logistics analytics and operational systems.
