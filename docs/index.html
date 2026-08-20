@@ -1,87 +1,138 @@
 <!doctype html>
 <html lang="es">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Eduardo Cruz — Data & Automation Engineer</title>
-  <meta name="description" content="Logistics analytics, ETL pipelines and operational data automation." />
+  <meta name="description" content="18 años en logística operativa. Automatización de procesos, ETL pipelines y análisis de datos para empresas de transporte y distribución." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="assets/style.css" />
   <link rel="icon" href="assets/favicon.png" />
 </head>
-
 <body>
   <div class="bg-grid" aria-hidden="true"></div>
   <div class="bg-glow" aria-hidden="true"></div>
-
   <main class="container">
+
+    <!-- HERO -->
     <header class="card hero">
       <div class="hero-top">
         <img class="avatar" src="assets/avatar.png" alt="Avatar de Eduardo Cruz" />
         <div class="hero-text">
           <h1>Eduardo Cruz</h1>
           <p class="subtitle">Data &amp; Automation Engineer <span class="muted">|</span> Logistics Analytics</p>
-          <p class="tagline">Building production-ready data systems that transform operational data into actionable
-            decisions.</p>
+          <p class="tagline">18 años operando logística. Ahora automatizo los procesos que más tiempo consumen.</p>
         </div>
       </div>
-
       <div class="links">
         <a class="btn primary" href="https://github.com/eddcruz" target="_blank" rel="noopener">GitHub</a>
-        <a class="btn" href="https://www.linkedin.com/in/eduardo-alejandro-cruz-castillo-a540b115a" target="_blank"
-          rel="noopener">LinkedIn</a>
+        <a class="btn" href="https://www.linkedin.com/in/eduardo-alejandro-cruz-castillo-a540b115a" target="_blank" rel="noopener">LinkedIn</a>
         <a class="btn" href="mailto:eduardalex8@gmail.com">Email</a>
       </div>
     </header>
 
+    <!-- PROJECTS -->
     <section class="card">
-      <h2>Key Project</h2>
+      <h2>Projects in Production</h2>
+
+      <!-- Project 1: DDEC -->
       <div class="project">
         <div class="project-main">
           <h3>Fleet DDEC Report System</h3>
-          <p>End-to-end PDF automation with OCR, validation, structured storage, and an analytics dashboard for fleet
-            operations.</p>
+          <p>Sistema de automatización end-to-end para procesamiento de reportes PDF de flota vehicular. Extrae 25 métricas por reporte vía OCR, detecta inconsistencias, elimina duplicados por MD5 y centraliza todo en un dashboard consultable en tiempo real.</p>
+          <div class="metrics-row">
+            <div class="metric">
+              <span class="metric-value">13,686</span>
+              <span class="metric-label">PDFs procesados</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">2,281 h</span>
+              <span class="metric-label">trabajo manual eliminado</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">201</span>
+              <span class="metric-label">unidades en flota</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">157</span>
+              <span class="metric-label">inconsistencias detectadas</span>
+            </div>
+          </div>
           <div class="meta">
             <span class="pill">Google Apps Script</span>
-            <span class="pill">Google Drive</span>
+            <span class="pill">Drive API v2</span>
             <span class="pill">Google Sheets</span>
+            <span class="pill">OCR</span>
             <span class="pill">Dashboard</span>
           </div>
         </div>
         <div class="project-actions">
-          <a class="btn small primary" href="https://github.com/eddcruz/fleet-ddec-report-system" target="_blank"
-            rel="noopener">View Repo</a>
+          <a class="btn small primary" href="https://github.com/eddcruz/fleet-ddec-report-system" target="_blank" rel="noopener">View Repo</a>
+        </div>
+      </div>
+
+      <hr class="project-divider" />
+
+      <!-- Project 2: Operator Automation -->
+      <div class="project">
+        <div class="project-main">
+          <h3>Operator Records Automation</h3>
+          <p>Automatización de ingesta y conciliación de catálogo de operadores desde correos de RH. Procesa adjuntos Excel, detecta altas y bajas con umbral de seguridad, y responde automáticamente consultas de descuentos por operador en menos de un minuto.</p>
+          <div class="metrics-row">
+            <div class="metric">
+              <span class="metric-value">30+</span>
+              <span class="metric-label">consultas/día automatizadas</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">2.5 h</span>
+              <span class="metric-label">liberadas por día</span>
+            </div>
+            <div class="metric">
+              <span class="metric-value">0</span>
+              <span class="metric-label">bajas falsas (umbral activo)</span>
+            </div>
+          </div>
+          <div class="meta">
+            <span class="pill">Google Apps Script</span>
+            <span class="pill">Gmail API</span>
+            <span class="pill">Google Sheets</span>
+            <span class="pill">Process Automation</span>
+          </div>
+        </div>
+        <div class="project-actions">
+          <!-- privado, sin repo público -->
+          <span class="btn small disabled">Producción interna</span>
         </div>
       </div>
     </section>
 
+    <!-- CAPABILITIES + STACK -->
     <section class="grid">
       <div class="card">
         <h2>Capabilities</h2>
         <ul class="list">
+          <li>Automatización de flujos operativos (Google Workspace)</li>
           <li>ETL pipelines &amp; data validation</li>
-          <li>Exploratory Data Analysis (EDA) &amp; visualization</li>
-          <li>Operational dashboards &amp; reporting automation</li>
-          <li>Forecasting &amp; anomaly detection (applied)</li>
+          <li>Dashboards operativos &amp; reporting automation</li>
+          <li>Exploratory Data Analysis (EDA) &amp; visualización</li>
+          <li>Sistemas de trazabilidad de activos y documentos</li>
         </ul>
       </div>
-
       <div class="card">
         <h2>Stack</h2>
         <div class="meta">
           <span class="pill">Python</span>
           <span class="pill">SQL</span>
+          <span class="pill">Google Apps Script</span>
           <span class="pill">Pandas</span>
           <span class="pill">scikit-learn</span>
-          <span class="pill">Google Apps Script</span>
+          <span class="pill">Power BI</span>
           <span class="pill">GCP</span>
           <span class="pill">Git</span>
         </div>
-
-        <h2 class="mt">Focus</h2>
-        <p class="muted">Logistics analytics · Operational data systems · Process automation</p>
+        <h2 class="mt">Background</h2>
+        <p class="muted">18 años en operaciones logísticas (transporte, distribución, CEDIS) · Ing. en Ciencia de Datos · Maestría en Ingeniería con Orientación en Ciencia de Datos</p>
       </div>
     </section>
 
@@ -94,5 +145,4 @@
     document.getElementById('year').textContent = new Date().getFullYear();
   </script>
 </body>
-
 </html>
