@@ -1,2 +1,5 @@
 # eddcruz.github.io
-Data & Automation Engineering portfolio focused on logistics analytics and operational systems.
+
+Portfolio: logistics operations improved with data and automation.
+
+**Live site:** https://eddcruz.github.io
